@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>ZLong: XML Layout Editor</title>
+		<!-- zlong javascripts -->
+		<script src="../src/zlong.js"></script>
+		<script>
+			ZLong.writeJsDependencies("../src/");
+		</script>
+		<!-- codemirror -->
+		<link rel="stylesheet" href="lib/codemirror.css">
+		<script src="lib/codemirror.js"></script>
+		<script src="lib/util/simple-hint.js"></script>
+		<link rel="stylesheet" href="lib/util/simple-hint.css">
+		<script src="lib/util/closetag.js"></script>
+		<script src="lib/util/xml-hint.js"></script>
+		<script src="mode/xml/xml.js"></script>
+		<style type="text/css">.CodeMirror {border: 1px solid #eee;} .CodeMirror-scroll { height: 100% }</style>
+		<!-- page -->
+		<link rel="stylesheet" href="style/style.css" />
+		<script src="js/jquery-1.7.2-min.js"></script>
+		<script src="js/editor.js"></script>
+	</head>
+	<body class="editor">
+		<h2>ZLong&trade;: A Cross-Platform &amp; Generic Layout Engine</h2>
+		<h1>XML Declaration Editor</h1>
+		
+		<p><b>Edit your layout declaration here:</b></p>
+		<textarea id="xml"></textarea>
+		
+		<div style="margin:0.5em 0">
+			<button style="padding:0.3em 2em;" id="preview"><u>P</u>review</button>
+			<button style="padding:0.3em 2em;" id="save"><u>S</u>ave</button>
+			<button style="padding:0.3em 2em;" id="load"><u>L</u>oad</button>
+		</div>
+		
+		<p><b>Console</b></p>
+		<textarea id="console" readonly="readonly" style="background:#f3f3f3;width:100%;height:10em;overflow-y:scroll;font-family:monospace;font-size:12px;line-height:1.3em;"></textarea>
+
+		<div id="json-result" style="display:none">
+			<p><b>Generated layout declarations<b></p>
+			<pre id="json-layout-decl"></pre>
+		</div>
+		
+		<p>Shortcuts:</p>
+		<ul>
+			<li>Alt+/: Activate auto-completions</li>
+			<li>Ctrl+B or Alt+B: Build xml to json layout declarations</li>
+		</ul>
+		
+		<div style="text-align:center">
+			<em>&copy; vivimice@gmail.com</em>
+		</div>
+		
+		<script>
+			/**
+			function draw(stage, dos) {
+				if (dos instanceof Content) {
+					var rect = dos.getGlobalBoundry();
+					stage.innerHTML += 
+						"<div style='position:absolute;left:$LEFT$px;top:$TOP$px;width:$WIDTH$px;height:$HEIGHT$px;$REST$'></div>"
+						.replace("$LEFT$", rect.getX())
+						.replace("$TOP$", rect.getY())
+						.replace("$WIDTH$", rect.getWidth())
+						.replace("$HEIGHT$", rect.getHeight())
+						.replace("$REST$", dos.getData("data"));
+				}
+				if (dos instanceof DisplayObjectContainer) {
+					for (var i = 0; i < dos.getNumChildren(); i++) {
+						draw(stage, dos.getChildAt(i));
+					}
+				}
+			}
+			*/
+		</script>
+		
+		<script>
+			$(document).ready(window.dialogArguments ? Preview.init : Editor.init);
+		</script>
+	</body>
+</html>

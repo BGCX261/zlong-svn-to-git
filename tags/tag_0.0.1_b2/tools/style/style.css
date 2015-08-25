@@ -1,0 +1,16 @@
+body.editor{font-family:Droid Sans,Arial,sans-serif;line-height:1.5;max-width:64em;margin:3em auto;}
+h1 {letter-spacing:-3px;font-size:3.23em;font-weight:bold;margin:0;}
+h2 {letter-spacing:-2px;font-size:1.5em;font-weight:bold;margin:0 0 -0.3em 0;}
+
+pre{white-space:pre-wrap;word-wrap:break-word;}
+
+.CodeMirror-scroll {height:auto;overflow-y:hidden;overflow-x:auto;}
+
+#json-layout-decl {padding:3px 5px;border:1px solid #999;background:#f3f3f3;font-size:12px;font-weight:normal;}
+
+body.preview{margin:0;padding:0;background:url(../images/bg.gif);position:relative;cursor:crosshair;font-family:Droid Sans,Arial,sans-serif;font-size:11px;}
+div.cursor-position{position:absolute;top:0;left:0;background:#ffffe1;padding:3px 8px;display:none;z-index:100000;}
+div.displayobject{position:absolute;}
+div.displayobject div.name{position:absolute;left:3px;top:0;}
+div.displayobject div.bg{position:absolute;left:0;top:0;opacity:0.1;width:100%;height:100%;left:0;top:0}
+div.stage-area{position:absolute;z-index:99999;left:0;top:0;}

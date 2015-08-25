@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="concat">
+	
+	<property name="version" value="0.0.1-b2" />
+	
+	<property name="src-dir" location="src" />
+	<property name="build-target" value="lib/zlong-${version}.js" />
+	
+	<target name="concat" description="Concatenate zlong source files">
+	    <echo message="Building ${build-target}" />
+	    <concat destfile="${build-target}">
+	        <filelist dir="${src-dir}">
+	        	<file name="inherits.js" />
+	        	<file name="json.js" />
+	        	<file name="errors.js" />
+	        	<file name="Point.js" />
+	        	<file name="Rectangle.js" />
+	        	<file name="DisplayObject.js" />
+	        	<file name="DisplayObjectContainer.js" />
+	        	<file name="Layoutable.js" />
+	        	<file name="HasDimension.js" />
+	        	<file name="LayoutableContent.js" />
+	        	<file name="LayoutableContainer.js" />
+	        	<file name="LinearBox.js" />
+	        	<file name="zlong.js" />
+	        </filelist>
+	    </concat>
+	    <echo message="${build-target} built." />
+	</target>
+	
+</project>
